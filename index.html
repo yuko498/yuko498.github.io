@@ -1,1 +1,30 @@
-hello world
+<html>
+    <head>
+        <body>
+            <h1>hello yuko image</h1>
+            <div class="image">
+                <img src="sample.jpg">
+            </div>
+            <button class="img_big">拡大</button>
+            <button class="img_small">縮小</button>
+        </body>
+    </head>
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+    var img_width = 50;
+    $(".image img").width(img_width + "%")
+    
+    $(".img_big").click(function() {
+        img_width = img_width + 10;
+        $(".image img").width(img_width + "%")
+    });
+
+    $(".img_small").click(function() {
+        img_width = img_width - 10;
+        $(".image img").width(img_width + "%")
+    });
+</script>
+
